@@ -1,5 +1,3 @@
-import javax.swing.JOptionPane;
-
 /**
  * Clase que representa un cubo y permite calcular el área base y volumen de éste
  */
