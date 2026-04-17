@@ -13,8 +13,8 @@ public class GestorCubos {
 
         public void inicializarCubos() {
             listaCubos.add(new Cubo(3));
-            listaCubos.add(new Cubo(6));
-            listaCubos.add(new Cubo(4));
+            listaCubos.add(new Cubo(10));
+            listaCubos.add(new Cubo(5));
         }
 
         public void ordenarCubos() {
