@@ -4,23 +4,21 @@ import java.util.Comparator;
 
 public class GestorCubos {
 
-    public static void main(final String[] args) {
-
         /** ArrayList que almacenará la información de los cubos */
-        private ArrayList<Cubo> Cubos = new ArrayList<>();
+        private ArrayList<Cubo> listaCubos = new ArrayList<>();
 
         public GestorCubos() {
-            Cubos = new Arraylist<>();
+            listaCubos = new ArrayList<>();
         }
 
         public void inicializarCubos() {
-            Cubos.add(new Cubo(3));
-            Cubos.add(new Cubo(6));
-            Cubos.add(new Cubo(4));
+            listaCubos.add(new Cubo(3));
+            listaCubos.add(new Cubo(6));
+            listaCubos.add(new Cubo(4));
         }
 
         public void ordenarCubos() {
-            Collections.sort(Cubos, new Comparator<Cubo>() {
+            Collections.sort(listaCubos, new Comparator<Cubo>() {
                 @Override
                 public int compare(Cubo c1, Cubo c2) {
                     return Float.compare(c1.calcularVolumen(), c2.calcularVolumen());
@@ -33,7 +31,6 @@ public class GestorCubos {
         }
 
         public ArrayList<Cubo> getCubos() {
-            return Cubos;
+            return listaCubos;
         }
-    }
 }
