@@ -1,5 +1,3 @@
-package ClaseCubo;
-
 import javax.swing.JOptionPane;
 
 /**
@@ -47,51 +45,6 @@ public class Cubo {
 	 */
 	public float calcularVolumen() {
 		return lado * lado * lado;
-	}
-	
-	/**
-	 * Solicita el lado del cubo al usuario
-	 */
-	public void solicitarLado() {
-		boolean valido = false;
-		
-		while(!valido) {
-			String l = JOptionPane.showInputDialog(null, "Introduzca el lado del cubo:", "Lado del cubo",
-					JOptionPane.QUESTION_MESSAGE);
-			if(l == null) {
-				JOptionPane.showMessageDialog(null, "Operación cancelada :(", "Cancelado", JOptionPane.ERROR_MESSAGE);
-				return;
-			} else if (l.isEmpty()) {
-				JOptionPane.showMessageDialog(null, "Introduzca un valor >:(", "Error: Campo vacío", JOptionPane.ERROR_MESSAGE);
-			} else {
-				try {
-					this.lado = Float.parseFloat(l);
-					if(this.lado <= 0) {
-						JOptionPane.showMessageDialog(null, "No puedes crear un cubo con dimensiones negativas o iguales a cero",
-								"Error: Número menor a 1", JOptionPane.ERROR_MESSAGE);
-					} else {
-						valido = true;
-					}
-				} catch (NumberFormatException e) {
-					JOptionPane.showMessageDialog(null, "Eso no es un número -_-", "Error: Valor inesperado", JOptionPane.ERROR_MESSAGE);
-				}
-		}
-		
-		}
-	}
-	
-	/**
-	 * Muestra el área de la base
-	 */
-	public void imprimirArea() {
-		JOptionPane.showMessageDialog(null, "Área de la base: "+calcularAreaBase(), "Área de la base", JOptionPane.INFORMATION_MESSAGE);
-	}
-	
-	/**
-	 * Muestra el volumen del cubo
-	 */
-	public void imprimirVolumen() {
-		JOptionPane.showMessageDialog(null, "Volumen del cubo: "+calcularVolumen(), "Volumen del cubo", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 }
