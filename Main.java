@@ -10,6 +10,7 @@ public class Main {
 		for(Cubo c : gestor.getCubos()) {
 			System.out.println("Lado: "+c.getLado()+"\nVolumen: "+c.calcularVolumen());
 		}
+		
 
 		Cubo c1 = new Cubo(3);
 		Cubo c2 = new Cubo(5);
