@@ -12,7 +12,7 @@ public class Main {
 		}
 
 		Cubo c1 = new Cubo(3);
-		Cubo c2 = new Cubo(9);
+		Cubo c2 = new Cubo(5);
 		
 		System.out.println("¿El cubo 1 cabe exactamente dentro del 2? " + gestor.cabeDentro(c1, c2));
 	}
